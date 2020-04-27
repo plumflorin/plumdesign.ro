@@ -1,0 +1,176 @@
+* {
+    margin: 0; 
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    height: 400px;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/sky.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.head-text-area {
+  color: #fff8e1;
+  margin-top: 60px;
+}
+
+.head-text-area h2, p {
+  text-align: center;
+  margin: 20px;
+}
+
+.head-text-area a {
+  width: 250px;
+  font-size: 1.1em;
+} 
+
+a {
+  display: block;
+  color: #ffa600;
+  margin: 0 auto;
+  width: 150px;
+  margin-top: 20px;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  text-align: center;
+  border: 2px solid #ffa600 ;
+  border-radius: 20px;
+}
+
+
+
+section {
+  display: flex;
+  
+}
+
+section > div {
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+}
+section img {
+  /* height: auto; */
+  max-width: 100%;
+  max-height: 350px;
+}
+
+/* ############ Hamburger Menu ############ */
+nav {
+    height: 10vh;
+    background: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  
+  
+  
+  @media screen and (max-width: 768px) {
+    .line {
+      width: 30px;
+      height: 3px;
+      background: white;
+      margin: 5px;
+    }
+    nav {
+      position: relative;
+    }
+    
+    .hamburger {
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+    }
+    
+    .nav-links {
+      position: fixed;
+      justify-content: center;
+      background: #5b78c7;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      clip-path: circle(100px at 85% -15%);
+      -webkit-clip-path: circle(100px at 85% -15%);
+      transition: all 1s ease-out;
+      pointer-events: none;
+    }
+    .nav-links.open {
+      clip-path: circle(1000px at 85% -15%);
+      -webkit-clip-path: circle(1000px at 85% -15%);
+      pointer-events: all;
+    }
+    .landing {
+      flex-direction: column;
+    }
+    .nav-links li {
+      opacity: 0;
+      padding: 5%;
+    }
+    .nav-links li a {
+      font-size: 25px;
+    }
+    .nav-links li:nth-child(1) {
+      transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2) {
+      transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3) {
+      transition: all 0.5s ease 0.6s;
+    }
+    li.fade {
+      opacity: 1;
+    }
+  }
+  
+  /* ############ END Hamburger Menu ############ */
+
+
+  .web {
+      height: 400px;
+      /* background-color: #ffcef3; */
+    }
+
+  .email {
+      height: 400px;
+      background-color: #a1eafb;
+    }
+
+  .servers {
+      height: 400px;
+    }
+
+  .networking {
+      height: 400px;
+      background-color: #21e6c1;
+    }
+
+    
