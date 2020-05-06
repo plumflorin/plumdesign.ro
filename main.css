@@ -17,6 +17,11 @@ header {
   background-repeat: no-repeat;
 }
 
+header.subpages {
+  height: 100px;
+
+}
+
 .head-text-area {
   color: #fff8e1;
   margin-top: 60px;
@@ -70,6 +75,59 @@ section img {
   /* height: auto; */
   max-width: 100%;
   max-height: 350px;
+}
+
+section h2 {
+  margin-bottom: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 0 0 10px #bcdefd;
+  
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #b6a0e2;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 70px;
+}
+
+.card-head h3 {
+  color: #303030;
+  font-size: 1.5rem;
+}
+
+
+.card-head i {
+  color: #ffffff;
+  font-size: 48px;
+}
+
+.card-head h3 {
+  display: inline;
+
 }
 
 /* ############ Hamburger Menu ############ */
