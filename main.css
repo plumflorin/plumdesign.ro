@@ -1,11 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Nunito", sans-serif;
+}
+
+a,
+a[href^="tel"],
+a[href^="mailto"] {
+  color: #f0f0f0;
+  text-decoration: none;
 }
 
 header {
@@ -15,11 +24,11 @@ header {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 header.subpages {
-  height: 100px;
-
+  height: 10vh;
 }
 
 .head-text-area {
@@ -33,9 +42,18 @@ header.subpages {
   margin: 20px;
 }
 
+.subpages nav {
+  background-color: #ffffff;
+}
+
+.subpages nav li a {
+  color: #9268c4;
+}
+
 section a,
 header .head-text-area a,
 footer input,
+footer button,
 footer textarea {
   display: block;
   color: #ffa600;
@@ -47,6 +65,7 @@ footer textarea {
   text-align: center;
   border: 2px solid #ffa600;
   border-radius: 20px;
+  font-weight: 700;
 }
 
 section a:hover,
@@ -60,6 +79,95 @@ header .head-text-area a {
   font-size: 1.1em;
 }
 
+.email,
+.networking {
+  position: relative;
+  margin: 0%;
+  padding: 0;
+}
+
+/* ######### Wave Shapes ########*/
+
+.custom-shape-divider-bottom-hero {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-hero svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+}
+
+.custom-shape-divider-bottom-hero .shape-fill {
+  fill: #ffffff;
+}
+
+.custom-shape-divider-bottom-email {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 1000;
+}
+
+.custom-shape-divider-bottom-email svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 58px;
+}
+
+.custom-shape-divider-bottom-email .shape-fill {
+  fill: #ffffff;
+}
+
+.custom-shape-divider-bottom-net {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-net svg {
+  position: relative;
+  display: block;
+  width: calc(147% + 1.3px);
+  height: 92px;
+}
+
+.custom-shape-divider-bottom-net .shape-fill {
+  fill: #202020;
+}
+
+/* ######### END Wave Shapes ########*/
+
+.web p,
+.email p,
+.servers p,
+.networking p {
+  font-style: italic;
+}
+
+h2.web,
+h2.email,
+h2.servers,
+h2.networking {
+  text-transform: uppercase;
+}
+
 section {
   display: flex;
 }
@@ -71,8 +179,8 @@ section > div {
   margin: auto;
   overflow: hidden;
 }
+
 section img {
-  /* height: auto; */
   max-width: 100%;
   max-height: 350px;
 }
@@ -95,7 +203,6 @@ section h2 {
   padding: 5px;
   margin: 10px;
   box-shadow: 0 0 10px #bcdefd;
-  
 }
 
 .card-head {
@@ -117,17 +224,12 @@ section h2 {
 .card-head h3 {
   color: #303030;
   font-size: 1.5rem;
+  display: inline;
 }
-
 
 .card-head i {
   color: #ffffff;
   font-size: 48px;
-}
-
-.card-head h3 {
-  display: inline;
-
 }
 
 /* ############ Hamburger Menu ############ */
@@ -147,15 +249,454 @@ nav {
   padding: 0 5px;
 }
 
+.logo {
+  position: absolute;
+  left: 2vw;
+  top: 1vh;
+}
+
+.logo img {
+  max-width: 15rem;
+}
+
 .nav-links li a {
   color: #ece5d8;
   text-decoration: none;
   font-size: 16px;
   padding: 5px 10px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 700;
 }
 
 .nav-links li a:hover {
   color: #ffa600;
+}
+
+.nav-links > li > a.active {
+  color: #ffa600;
+}
+
+.subpages nav li a {
+  color: #7c7c7c;
+}
+
+/* ############ END Hamburger Menu ############ */
+
+.web {
+  height: 400px;
+  color: #646464;
+}
+
+.email {
+  height: 400px;
+  color: #fff8e1;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./img/email-back.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.servers {
+  height: 400px;
+  color: #646464;
+}
+
+.networking {
+  height: 400px;
+  color: #fff8e1;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./img/network-back.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+footer {
+  width: 100%;
+  background-color: #202020;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+footer div {
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+}
+
+footer h2,
+footer p {
+  color: #f0f0f0;
+  padding: 10px;
+}
+
+footer .text a {
+  display: block;
+  padding: 0.3em 0;
+}
+
+footer h2,
+footer a,
+footer i,
+footer p {
+  font-size: 1.1em;
+}
+
+footer h2 {
+  font-size: 30px;
+}
+
+footer i {
+  color: #9092ff;
+}
+
+.contact p {
+  display: inline;
+}
+
+footer input,
+footer button,
+footer textarea {
+  text-align: center;
+  min-width: 300px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  outline: none;
+  border-width: 1px;
+}
+
+footer button.trimite {
+  cursor: pointer;
+  min-width: 150px;
+}
+
+footer label {
+  display: block;
+  padding: 0;
+  color: #f2f2f2;
+  margin-bottom: 1em;
+}
+
+.showcase_head {
+  height: 450px;
+  width: 100%;
+  text-align: center;
+  padding: 2em;
+}
+
+.showcase_head h2,
+.showcase_head p {
+  color: #fff8e1;
+  padding: 1% 0;
+}
+
+.showcase_head h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.showcase_head p {
+  letter-spacing: 0.05rem;
+  line-height: 1.4em;
+  word-spacing: 0.05rem;
+  font-style: italic;
+}
+
+.showcase_web {
+  position: relative;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./img/web-subpages.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 2em;
+}
+
+.showcase_mail {
+  position: relative;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./img/email-subpages.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 2em;
+}
+
+.showcase_servere {
+  position: relative;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./img/server-subpages.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 2em;
+}
+
+.showcase_retelistica {
+  position: relative;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./img/networking-subpages.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 2em;
+}
+
+.showcase_web div,
+.showcase_mail div,
+.showcase_servere div,
+.showcase_retelistica div {
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ############ CARD ############ */
+
+@import url("https://fonts.googleapis.com/css?family=Lato:700|Noticia+Text:400i&display=swap");
+
+.wrappercard {
+  /* center the article in the viewport */
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 80vh;
+  justify-content: center;
+  align-items: center;
+  /* include an off-white background */
+  /* background: hsl(250, 85%, 97%); */
+  /* add perspective for the rotation of the article, added through the script */
+  perspective: 500px;
+  margin-bottom: 5rem;
+}
+
+article {
+  /* limit the width of the article container */
+  width: 350px;
+  height: 350px;
+  /* display the contents in a column */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: hsl(0, 0%, 100%);
+  line-height: 2;
+  border-radius: 10px;
+  margin: 1rem;
+  margin-top: 6rem;
+  /* transition for the transform property, updated in the script */
+  transition: transform 0.2s ease-out;
+  box-shadow: 0 0 5px -2px hsla(0, 0%, 0%, 0.1);
+}
+article figure {
+  /* limit the width and height of the figure to show the image in a circle */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  /* specify negative margin matching half the height of the element */
+  margin-top: -60px;
+  /* position relative for the pseudo element */
+  position: relative;
+}
+article figure:before {
+  /* add a border around the figure matching the color of the background, faking the clip */
+  content: "";
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  border: 1rem solid hsl(250, 85%, 97%);
+  box-shadow: 0 1px hsla(0, 0%, 0%, 0.1);
+}
+article figure img {
+  /* stretch the image to cover the size of the wrapping container */
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  /* object fit to maintain the aspect ratio and fit the width/height */
+  object-fit: cover;
+}
+
+article div {
+  /* center the text in the div container */
+  text-align: center;
+  margin: 10px;
+  /* margin: auto; */
+}
+article div p {
+  color: hsl(250, 5%, 45%);
+  font-weight: 400;
+  font-style: italic;
+  margin: 1rem 0 3rem;
+  font-family: "Noticia Text", serif;
+  /* position relative for the pseudo element */
+  position: relative;
+  padding: 1em;
+  z-index: 5;
+}
+
+article div h1 {
+  /* considerably reduce the size of the heading */
+  color: hsl(260, 5%, 55%);
+  font-family: "Lato", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  padding-top: 20px;
+}
+
+#confidentialitate {
+  margin: 5%;
+  padding: 5% 10%;
+  border-radius: 10px;
+}
+
+#confidentialitate p,
+#confidentialitate h1,
+#confidentialitate h2,
+#confidentialitate h3,
+#confidentialitate ul {
+  padding: 2%;
+}
+
+#confidentialitate a {
+  color: black;
+  font-weight: 700;
+}
+
+#confidentialitate ul {
+  list-style-type: none;
+}
+
+/* ############ End of CARD ############ */
+
+@media screen and (min-width: 1200px) {
+  .nav-links li a {
+    font-size: 16px;
+  }
+
+  header {
+    height: 600px;
+  }
+
+  header .head-text-area {
+    margin-top: 100px;
+  }
+
+  .head-text-area h2,
+  .head-text-area p,
+  .head-text-area div a {
+    padding: 15px;
+  }
+
+  .web,
+  .email,
+  .servers,
+  .networking {
+    height: 600px;
+  }
+
+  p.web,
+  p.email,
+  p.servers,
+  p.networking {
+    font-style: italic;
+  }
+
+  .head-text-area h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  section p,
+  .head-text-area p {
+    font-size: 30px;
+  }
+
+  header .head-text-area a,
+  section a {
+    width: 350px;
+    font-size: 1.5em;
+  }
+
+  .logo img {
+    max-width: 15rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-links li a {
+    font-size: 16px;
+  }
+
+  .logo img {
+    max-width: 10rem;
+  }
+
+  section h2,
+  section p {
+    padding: 5px;
+  }
+
+  section h2,
+  .head-text-area h2 {
+    font-size: 30px;
+  }
+
+  section p,
+  .head-text-area p {
+    font-size: 20px;
+  }
+
+  header .head-text-area a,
+  section a {
+    width: 250px;
+    font-size: 1.3em;
+  }
+
+  .email div,
+  .networking div {
+    margin: 0;
+    padding: 0;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .logo img {
+    max-width: 8rem;
+  }
+
+  .email div,
+  .networking div {
+    margin: 0;
+    padding: 0;
+    margin: auto;
+  }
+
+  .email div,
+  .networking div,
+  .showcase_head div {
+    padding: 0;
+    margin: auto;
+    width: 100%;
+  }
+
+  .email div p,
+  .networking div p,
+  .email div h2,
+  .networking div h2 {
+    padding: 0 1rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -165,8 +706,17 @@ nav {
     background: white;
     margin: 5px;
   }
+
+  .subpages .hamburger .line {
+    background: #7c7c7c;
+  }
+
   nav {
     position: relative;
+  }
+
+  .logo img {
+    max-width: 10rem;
   }
 
   .hamburger {
@@ -175,13 +725,13 @@ nav {
     right: 5%;
     top: 50%;
     transform: translate(-5%, -50%);
-    z-index: 2;
+    z-index: 100;
   }
 
   .nav-links {
     position: fixed;
     justify-content: center;
-    background: #5b78c7;
+    background: #6838c2;
     height: 100vh;
     width: 100%;
     flex-direction: column;
@@ -189,7 +739,13 @@ nav {
     -webkit-clip-path: circle(0px at 80% -15%);
     transition: all 1s ease-out;
     pointer-events: none;
+    z-index: 50;
   }
+
+  .subpages .nav-links {
+    background: #faf7ff;
+  }
+
   .nav-links.open {
     clip-path: circle(1000px at 90% -10%);
     -webkit-clip-path: circle(1000px at 85% -15%);
@@ -217,213 +773,49 @@ nav {
   li.fade {
     opacity: 1;
   }
-}
 
-/* ############ END Hamburger Menu ############ */
+  .email div,
+  .networking div,
+  .showcase_head div {
+    padding: 0;
+    margin: auto;
+    width: 100%;
+  }
 
-.web {
-  height: 400px;
-  color: #646464;
-}
+  section {
+    min-height: 450px;
+  }
 
-.email {
-  height: 400px;
-  color: #fff8e1;
-  background-color: #574b90;
-}
+  .project article {
+    max-width: 350px;
+  }
 
-.servers {
-  height: 400px;
-  color: #646464;
-}
+  article {
+    /* limit the width of the article container */
+    padding: 0;
+    height: 400px;
+    width: 330px;
+  }
 
-.networking {
-  height: 400px;
-  color: #fff8e1;
-  background-color: #107a8b;
-}
-
-footer {
-  display: block;
-}
-
-footer div {
-  padding: 10px;
-  text-align: center;
-  margin: auto;
-}
-
-footer h2,
-footer p {
-  color: #727272;
-  padding: 10px;
-}
-
-footer h2,
-footer a,
-footer i,
-footer p {
-  color: #3a3a3a;
-  font-size: 1.1em;
-}
-
-footer h2 {
-  font-size: 30px;
-}
-
-footer i {
-  color: #9092ff;
-}
-
-.contact p {
-  display: inline;
-}
-
-footer form,
-footer input,
-footer textarea {
-  text-align: center;
-  color: #727272;
-  min-width: 300px;
-  max-width: 1000px;
-  width: auto;
-  margin-top: 0;
-  margin-bottom: 10px;
-  outline: none;
-  border-width: 1px;
-}
-
-.trimite {
-  padding: 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-footer label {
-  display: block;
-  padding: 0;
-}
-
-@media screen and (min-width: 1024px) {
-  .nav-links li a {
-    font-size: 20px;
+  .custom-shape-divider-bottom-hero svg,
+  .custom-shape-divider-bottom-email svg,
+  .custom-shape-divider-bottom-net svg {
+    height: 30px;
   }
 
   footer {
-    display: flex;
+    flex-direction: column;
   }
 
-  footer div {
-    max-width: 500px;
-  }
-
-  section h2,
-  section p {
-    padding: 5px;
-  }
-
-  section h2,
-  .head-text-area h2 {
-    font-size: 30px;
-  }
-
-  section p,
-  .head-text-area p {
-    font-size: 20px;
-  }
-
-  header .head-text-area a,
-  section a {
-    width: 250px;
-    font-size: 1.3em;
-  }
-
-  .trimite {
-    padding: 5px 10px;
-    font-size: 20px;
+  .text,
+  .contact-form {
+    border-bottom: #ffa600 2px solid;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .nav-links li a {
-    font-size: 24px;
-  }
-
-  header {
-    height: 600px;
-  }
-
-  header .head-text-area {
-    margin-top: 100px;
-  }
-
-  .head-text-area h2,
-  .head-text-area p,
-  .head-text-area div {
-    padding: 15px;
-  }
-
-  .web,
-  .email,
-  .servers,
-  .networking {
-    height: 600px;
-  }
-
-  section h2,
-  .head-text-area h2 {
-    font-size: 40px;
-  }
-
-  section p,
-  .head-text-area p {
-    font-size: 30px;
-  }
-
-  header .head-text-area a,
-  section a {
-    width: 350px;
-    font-size: 1.5em;
-  }
-
-  footer h2,
-  footer a,
-  footer i,
-  footer p {
-    color: #3a3a3a;
-    font-size: 1.3em;
-  }
-
-  footer h2 {
-    font-size: 40px;
-  }
-
-  footer i {
-    color: #9092ff;
-  }
-
-  footer form,
-  footer input,
-  footer textarea {
-    text-align: center;
-    color: #727272;
-    min-width: 400px;
-    max-width: 1300px;
-    width: auto;
-    margin-top: 0;
-    margin-bottom: 10px;
-    outline: none;
-    border-width: 1px;
-    font-size: 20px;
-  }
-
-  .trimite {
-    padding: 5px 15px;
-    font-size: 24px;
-  }
-
-  .trimite:hover {
-    background-color: #ffa600;
-    color: #242424;
-  }
+.hover-in {
+  transition: 0.3s ease-out;
+}
+.hover-out {
+  transition: 0.3s ease-in;
 }

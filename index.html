@@ -1,21 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LGRJC0WBTZ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LGRJC0WBTZ");
+    </script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Plum Design</title>
+    <title>plumdesign</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      content="plumdesign este o companie din Constanta care ofera o gama variata de servicii IT precum consultanta IT, Web Design, gazduire email, instalare servere si intretinere si dezvoltare retea comunicatii."
+      name="description"
+    />
+
+    <meta
+      content="Consultanta IT, Web Development, Web Design, Gazduire mail, Gazduire web, gazduire site, instalare server, Linux, Windows, retelistica, retea, switch, router"
+      name="keywords"
+    />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.4.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.wpcc.io/lib/1.0.2/cookieconsent.min.css"
+    />
+    <script
+      src="https://cdn.wpcc.io/lib/1.0.2/cookieconsent.min.js"
+      defer
+    ></script>
+    <script>
+      window.addEventListener("load", function () {
+        window.wpcc.init({
+          border: "thin",
+          corners: "large",
+          colors: {
+            popup: {
+              background: "#493500",
+              text: "#f6f6f6",
+              border: "#ffa600",
+            },
+            button: { background: "#ffa600", text: "#ffffff" },
+          },
+          padding: "small",
+          margin: "small",
+          transparency: "15",
+          content: {
+            href: "https://www.plumdesign.ro/cookie.html",
+            message:
+              "Acest site foloseste cookie-uri pentru a asigura cea mai buna experienta in navigare.",
+            link: "Afla mai multe.",
+            button: "Am inteles",
+          },
+        });
+      });
+    </script>
   </head>
   <body>
-
     <!-- HEADER -->
     <header>
       <nav>
+        <div class="logo">
+          <a href="/"><img src="/img/logo.png" alt="plumdesign.ro" /></a>
+        </div>
         <div class="hamburger">
           <div class="line"></div>
           <div class="line"></div>
@@ -24,92 +85,162 @@
         <ul class="nav-links">
           <li><a href="/web.html">Web Design</a></li>
           <li><a href="/mail.html">Mail</a></li>
-          <li><a href="/server.html">Servere</a></li>
+          <li><a href="/servere.html">Servere</a></li>
           <li><a href="/retelistica.html">Retelistica</a></li>
+          <li><a href="#footer">Contact</a></li>
         </ul>
       </nav>
       <div class="head-text-area">
-        <h2>ADUCETI-VA AFACEREA <span style="color: #ffa600;">ONLINE</span></h2>
-        <p>Fara batai de cap si cu costuri minime</p>
-        <div>
+        <h2 data-aos="fade-down">
+          ADUCETI-VA AFACEREA <span style="color: #ffa600">ONLINE</span>
+        </h2>
+        <p data-aos="fade">Fara batai de cap. Costuri minime.</p>
+        <div data-aos="fade-up">
           <a href="/contact">CONTACTEAZA-NE!</a>
+        </div>
+        <div class="custom-shape-divider-bottom-hero">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+              opacity=".25"
+              class="shape-fill"
+            ></path>
+            <path
+              d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+              opacity=".5"
+              class="shape-fill"
+            ></path>
+            <path
+              d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+              class="shape-fill"
+            ></path>
+          </svg>
         </div>
       </div>
     </header>
     <!-- End of HEADER -->
-    
+
     <!-- SECTIONS -->
     <section class="web">
-      <div>
-        <h2>Creare site-uri web</h2>
+      <div data-aos="zoom-in-right">
+        <h2>CREARE SITEURI WEB</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quis eum
-          autem magnam veniam sit molestiae non quaerat accusamus unde.
+          Servicii complete de web design si promovare online. Te ajutam sa iti
+          promovezi afacerea in online 24/24 de ore si sa-ti cresti numarul
+          clientilor, la costuri minime.
         </p>
-        <a href="/contact">AFLA MAI MULTE</a>
+        <a href="/web.html">AFLA MAI MULTE</a>
       </div>
-      <div>
+      <div data-aos="zoom-in-left">
         <img src="./img/comp.png" alt="computer" />
       </div>
     </section>
 
     <section class="email">
       <div>
-        <img src="./img/favpng_email.png" alt="email" />
-      </div>
-      <div>
-        <h2>Email privat</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quis eum
-          autem magnam veniam sit molestiae non quaerat accusamus unde.
+        <h2 data-aos="fade-left">EMAIL PRIVAT</h2>
+        <p data-aos="fade">
+          Ai o companie la inceput de drum si ai nevoie de serviciul de email?
+          Indiferent daca doresti instalarea unui serviciu de email pe serverele
+          proprii sau pe serverele noastre, suntem aici sa iti punem solutia in
+          practica.
         </p>
-        <a href="/contact">AFLA MAI MULTE</a>
+        <a data-aos="fade-right" href="/mail.html">AFLA MAI MULTE</a>
+      </div>
+      <div class="custom-shape-divider-bottom-email">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
       </div>
     </section>
 
     <section class="servers">
-      <div>
-        <h2>Instalare si configurare servere</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quis eum
-          autem magnam veniam sit molestiae non quaerat accusamus unde.
-        </p>
-        <a href="/contact">AFLA MAI MULTE</a>
-      </div>
-      <div>
+      <div data-aos="zoom-in-up">
         <img src="./img/maintenance.svg" alt="server" />
+      </div>
+      <div data-aos="zoom-in-down">
+        <h2>INSTALARE SI CONFIGURARE SERVERE</h2>
+        <p>
+          Prin serviciul nostru de instalare si configurare servere ai acum
+          posibilitatea de a-ti dezvolta infrastructura IT cu serviciile
+          esentiale de care ai nevoie pentru ca afacerea ta sa se dezvolte.
+        </p>
+        <a href="/servere.html">AFLA MAI MULTE</a>
       </div>
     </section>
 
     <section class="networking">
       <div>
-        <img src="./img/connections.svg" alt="network" />
-      </div>
-      <div>
-        <h2>Configurare si dezvoltare retea informatica</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quis eum
-          autem magnam veniam sit molestiae non quaerat accusamus unde.
+        <h2 data-aos="fade-down">
+          CONFIGURARE SI DEZVOLTARE RETEA INFORMATICA
+        </h2>
+        <p data-aos="fade">
+          Proiectarea, crearea, configurarea si administrarea unei retele de
+          calculatoare prin fir sau WiFi este un serviciu de care orice companie
+          are nevoie pentru buna desfasurare a activitatilor zilnice ale
+          angajatilor.
         </p>
-        <a href="/contact">AFLA MAI MULTE</a>
+        <a data-aos="fade-up" href="/retelistica.html">AFLA MAI MULTE</a>
+      </div>
+      <div class="custom-shape-divider-bottom-net">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
       </div>
     </section>
     <!-- End of SECTIONS -->
 
     <!-- FOOTER -->
-    <footer>
+    <footer id="footer">
       <div class="text">
-        <h2>De ce să alegi Plum Design?</h2>
-        <p>B R G înțelege mecanismul succesului organizațional.</p>
-        <p>
-          Avem abilitățile, cunoștințele și experiența necesare pentru a genera
-          noi tipuri de valoare pentru client.
-        </p>
-        <p>
-          Oferim puncte de vedere extrem de obiective, cu accent pe afaceri,
-          tehnologie și analiză, valorificând experiența noastră vastă în acest
-          sector.
-        </p>
+        <h2>Servicii</h2>
+        <a href="/web.html">Web Design</a>
+        <a href="/mail.html">Mail</a>
+        <a href="/servere.html">Servere</a>
+        <a href="/retelistica.html">Retelistica</a>
+        <a href="/confidentialitate.html">Politica de confidentialitate</a>
+        <a href="/cookie.html">Politica de cookie</a>
+      </div>
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xvovjjee" method="POST">
+          <div>
+            <label> Contact! </label>
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          <div>
+            <input
+              type="tel"
+              name="telefon"
+              placeholder="Telefon ( optional )"
+            />
+          </div>
+          <div>
+            <textarea name="mesaj" placeholder="Mesaj" required></textarea>
+          </div>
+          <div></div>
+          <button class="trimite" type="submit">Send</button>
+        </form>
       </div>
       <div class="contact">
         <div>
@@ -118,41 +249,48 @@
         </div>
         <div>
           <i class="ri-mail-unread-line ri-xl"></i>
-          <span><a href="mailto: office@plumdesign.ro">office@plumdesign.ro</a></span>
+          <span
+            ><a href="mailto: office@plumdesign.ro"
+              >office@plumdesign.ro</a
+            ></span
+          >
         </div>
         <div>
           <i class="ri-phone-fill ri-xl"></i>
-          <span><a href="tel: +40736626962">+4 0736626962</a></span>
+          <span><a href="tel:+40736626962">+4 0736626962</a></span>
         </div>
-      </div>
-      <div class="contact-form">
-        <form action="https://formspree.io/FORM_ID" method="POST">
-          <div>
-            <label>
-              Email:
-            </label>
-            <input type="email" name="_replyto" required/>
-          </div>
-          <div>
-            <label>
-              Telefon (optional):
-            </label>
-            <input type="tel" name="_telefon"/>
-          </div>
-          <div>
-            <label>
-              Mesaj:
-            </label>
-            <textarea name="message" required></textarea>
-          </div>
-          <div>
-        </div>
-        <input class="trimite" type="submit" value="Trimite" />
-        </form>
       </div>
     </footer>
     <!-- End of FOOTER -->
 
+    <script src="jquery.min.js"></script>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        //offset: 120, // offset (in px) from the original trigger point
+        delay: 200, // values from 0 to 3000, with step 50ms
+        duration: 800, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/604351f11c1c2a130d65987d/1f03fg670";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
   </body>
 </html>
